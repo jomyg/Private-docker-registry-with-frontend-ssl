@@ -1,0 +1,45 @@
+version: '3'
+services:
+  registry:
+
+    image: registry:2
+    ports:
+    - "5000:5000"
+
+    environment:
+
+      - REGISTRY_AUTH=htpasswd
+      - REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm
+      - REGISTRY_AUTH_HTPASSWD_PATH=/auth/registry.password
+      - REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY=/data
+      - REGISTRY_HTTP_ADDR=0.0.0.0:5000
+      - REGISTRY_HTTP_TLS_CERTIFICATE=/certs/server.crt
+      - REGISTRY_HTTP_TLS_KEY=/certs/server.key
+
+    volumes:
+      - data:/data
+      - ./certs:/certs
+      - ./auth:/auth
+
+    networks:
+      - registry_net
+
+  frontend:
+    environment:
+     - ENV_DOCKER_REGISTRY_HOST=registry
+     - ENV_DOCKER_REGISTRY_PORT=5000
+     - ENV_DOCKER_REGISTRY_USE_SSL=1
+     - ENV_USE_SSL="yes"
+    volumes:
+     - ./certs/server.crt:/etc/apache2/server.crt:ro
+     - ./certs/server.key:/etc/apache2/server.key:ro
+    ports:
+     -  443:443
+    image: konradkleine/docker-registry-frontend:v2
+    networks:
+     - registry_net
+
+volumes:
+  data:
+networks:
+  registry_net:
