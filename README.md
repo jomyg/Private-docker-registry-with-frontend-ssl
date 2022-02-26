@@ -107,4 +107,15 @@ a09e0b79965d   registry:2                                 "/entrypoint.sh /etc�
 ## Conclusion
 Our private registry is now live with frontend
 
+## Sample snaps
 
+<center><img alt="auth-trigger" src="firefox_CqRyTV1ZYs.png"> </img></center>
+<center><img alt="auth-trigger" src="firefox_un8ykpix0o.png"> </img></center>
+<center><img alt="auth-trigger" src="firefox_LUegi7SjaD.png"> </img></center>
+
+#### ⚙️ Connect with Me
+
+<p align="center">
+<a href="mailto:jomyambattil@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/jomygeorge11"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a> 
+<a href="https://www.instagram.com/therealjomy"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/></a><br />
