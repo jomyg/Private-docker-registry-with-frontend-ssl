@@ -119,7 +119,7 @@ The push refers to repository [jomygeorge.xyz:5000/os]
 36ffdceb4c77: Mounted from myubtu/jomy
 latest: digest: sha256:7c9c7fed23def3653a0da5bc9ecb651efe155ebd5802c7ba5d585edaa6c89496 size: 529
 ```
-> How to pull the image to our private registry
+> How to pull the image from our private registry
 ```
  ~]# docker pull jomygeorge.xyz:5000/helo:v1
 v1: Pulling from helo
