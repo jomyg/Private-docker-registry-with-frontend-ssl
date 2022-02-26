@@ -97,12 +97,13 @@ networks:
 
 ### After creation
 ```
+```
  ~]# docker container ls
 CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS          PORTS                                           NAMES
 a09e0b79965d   registry:2                                 "/entrypoint.sh /etc…"   48 minutes ago   Up 48 minutes   0.0.0.0:5000->5000/tcp, :::5000->5000/tcp       root_registry_1
 525d3c1078bf   konradkleine/docker-registry-frontend:v2   "/bin/sh -c $START_S…"   48 minutes ago   Up 48 minutes   80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp   root_frontend_1
 ```
-```
+
 ## Conclusion
 Our private registry is now live with frontend
 
